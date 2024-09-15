@@ -27,16 +27,6 @@
 
 ![Swagger from 1C example](/assets/web_client.PNG 'Swagger from 1C example')
 
-В каталозі extFiles містяться наступні файли:
-
-1. [Web1C.cf - основна підсистема](extFiles/Web1C.cf)
-2. [Web1C_SB.cf - Web1C, яка інтегрована в BAS SB](extFiles/Web1C_SB.cf)
-3. [Web1C_SB.dt - Web1C, яка інтегрована в BAS SB](extFiles/Web1C_SB.dt)
-4. [Web1C_files.xml - файли для Web1C, яка інтегрована в BAS SB](extFiles/Web1C_files.xml)
-5. [dashboard.cf - конфігурація для конструювання показників](extFiles/dashboard.cf)
-6. [dashboard.dt = конфігурація для конструювання показників](extFiles/dashboard.dt)
-
-
 ## Інтеграція
 
 Підсистема Web1C складається із двох вкладених підсистем:
