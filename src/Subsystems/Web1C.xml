@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="9f368fd0-bc1d-4b13-b865-2155078a8fdd">
+		<Properties>
+			<Name>Web1C</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Web 1C</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.Web1C</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.Index</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Web1C_Сессии</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_Авторизация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ФормированиеОтветов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_Страницы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.Web1C_ИмяПубликации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.Web1C_ПолныйАдресПубликации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_УправлениеКуки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_Компоненты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ОбщегоНазначенияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Web1C_Хеширование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.Web1C_ФормаКонстант</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Web1C_АктивностьПользователей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ВыборкаДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ВидыИсточниковДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_ИсточникДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_HTMLОбъекты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Web1C_НастройкиЭкспортаHtmlОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_УправлениеКонтентом</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_УправлениеКонтентомКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Web1C_ВыгрузкаЗагрузкаДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Web1C_ТокеныДляВхода</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_ОтчетыЛичногоКабинета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ВариантыЗаполнениеОтчетовЛК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ДоступныеТипыПолейДляЛК</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ВнутренниеПараметрыОтчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.Web1C_ЭкспортФайлов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_Ресурсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ВидыРесурса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.Ресурсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ОбработчикиHTTPЗапросов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.КоннекторHTTP</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.monaco</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_ОбъектыАвторизации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Web1C</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ExchangePlan.Web1C_Синхронизация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_РедакторКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.Web1C_Домен</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.Web1C</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>Core</Subsystem>
+			<Subsystem>Customization</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>
