@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПроверитьМакет" id="119">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПроверитьМакет</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьМакетРасширеннаяПодсказка" id="120"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Описание" id="104">
+			<DataPath>Объект.Описание</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ОписаниеКонтекстноеМеню" id="105"/>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="106"/>
+		</InputField>
+		<Pages name="Группа1" id="10">
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="11"/>
+			<ChildItems>
+				<Page name="ГруппаКонструктор" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конструктор</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Конструктор</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа конструктор</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ГруппаКонструкторРасширеннаяПодсказка" id="13"/>
+					<ChildItems>
+						<Table name="Состав" id="16">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.Состав</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СоставКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="СоставКоманднаяПанель" id="18">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СоставДобавить" id="107">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.Состав.StandardCommand.Add</CommandName>
+										<ExtendedTooltip name="СоставДобавитьРасширеннаяПодсказка" id="108"/>
+									</Button>
+									<Button name="СоставСкопироватьСтрокуСостава" id="115">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СкопироватьСтрокуСостава</CommandName>
+										<ExtendedTooltip name="СоставСкопироватьСтрокуСоставаРасширеннаяПодсказка" id="116"/>
+									</Button>
+									<Button name="СоставУдалить" id="109">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.Состав.StandardCommand.Delete</CommandName>
+										<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="СоставУдалитьРасширеннаяПодсказка" id="110"/>
+									</Button>
+									<Button name="СоставПереместитьВверх" id="111">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Состав.StandardCommand.MoveUp</CommandName>
+										<ExtendedTooltip name="СоставПереместитьВверхРасширеннаяПодсказка" id="112"/>
+									</Button>
+									<Button name="СоставПереместитьВниз" id="113">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.Состав.StandardCommand.MoveDown</CommandName>
+										<ExtendedTooltip name="СоставПереместитьВнизРасширеннаяПодсказка" id="114"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СоставРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="СоставСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>Состав</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="СоставСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СоставСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>Состав</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="СоставСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СоставУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>Состав</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СоставУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="СоставУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">СоставПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СоставНаименование" id="29">
+									<DataPath>Объект.Состав.Наименование</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СоставНаименованиеКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="СоставНаименованиеРасширеннаяПодсказка" id="31"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Группа4" id="32">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<UsualGroup name="Группа2" id="134">
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="135"/>
+									<ChildItems>
+										<InputField name="НаименованиеЭлементаСостава" id="34">
+											<DataPath>НаименованиеЭлементаСостава</DataPath>
+											<ContextMenu name="НаименованиеЭлементаСоставаКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="НаименованиеЭлементаСоставаРасширеннаяПодсказка" id="36"/>
+											<Events>
+												<Event name="OnChange">НаименованиеЭлементаСоставаПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ВидИсточникаДанных" id="40">
+											<DataPath>ВидИсточникаДанных</DataPath>
+											<ContextMenu name="ВидИсточникаДанныхКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="ВидИсточникаДанныхРасширеннаяПодсказка" id="42"/>
+											<Events>
+												<Event name="OnChange">ВидИсточникаДанныхПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ИсточникДанных" id="43">
+											<DataPath>ИсточникДанных</DataPath>
+											<ContextMenu name="ИсточникДанныхКонтекстноеМеню" id="44"/>
+											<ExtendedTooltip name="ИсточникДанныхРасширеннаяПодсказка" id="45"/>
+											<Events>
+												<Event name="OnChange">ИсточникДанныхПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИсточникЗапроса" id="71">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры источника</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Параметры источника</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа источник запроса</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Collapsible</Behavior>
+									<CollapsedRepresentationTitle>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры источника</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Параметры источника</v8:content>
+										</v8:item>
+									</CollapsedRepresentationTitle>
+									<Representation>None</Representation>
+									<ExtendedTooltip name="ГруппаИсточникЗапросаРасширеннаяПодсказка" id="72"/>
+									<ChildItems>
+										<Table name="ПараметрыИсточника" id="73">
+											<Representation>List</Representation>
+											<HeightControlVariant>UseContentHeight</HeightControlVariant>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
+											<DataPath>ПараметрыИсточника</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ПараметрыИсточникаКонтекстноеМеню" id="74"/>
+											<AutoCommandBar name="ПараметрыИсточникаКоманднаяПанель" id="75"/>
+											<ExtendedTooltip name="ПараметрыИсточникаРасширеннаяПодсказка" id="76"/>
+											<SearchStringAddition name="ПараметрыИсточникаСтрокаПоиска" id="77">
+												<AdditionSource>
+													<Item>ПараметрыИсточника</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПараметрыИсточникаСтрокаПоискаКонтекстноеМеню" id="78"/>
+												<ExtendedTooltip name="ПараметрыИсточникаСтрокаПоискаРасширеннаяПодсказка" id="79"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ПараметрыИсточникаСостояниеПросмотра" id="80">
+												<AdditionSource>
+													<Item>ПараметрыИсточника</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ПараметрыИсточникаСостояниеПросмотраКонтекстноеМеню" id="81"/>
+												<ExtendedTooltip name="ПараметрыИсточникаСостояниеПросмотраРасширеннаяПодсказка" id="82"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ПараметрыИсточникаУправлениеПоиском" id="83">
+												<AdditionSource>
+													<Item>ПараметрыИсточника</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ПараметрыИсточникаУправлениеПоискомКонтекстноеМеню" id="84"/>
+												<ExtendedTooltip name="ПараметрыИсточникаУправлениеПоискомРасширеннаяПодсказка" id="85"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="OnActivateRow">ПараметрыИсточникаПриАктивизацииСтроки</Event>
+												<Event name="OnChange">ПараметрыИсточникаПриИзменении</Event>
+											</Events>
+											<ChildItems>
+												<InputField name="ПараметрыИсточникаПараметр" id="86">
+													<DataPath>ПараметрыИсточника.Параметр</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="ПараметрыИсточникаПараметрКонтекстноеМеню" id="87"/>
+													<ExtendedTooltip name="ПараметрыИсточникаПараметрРасширеннаяПодсказка" id="88"/>
+												</InputField>
+												<InputField name="ПараметрыИсточникаИсточникЗначения" id="89">
+													<DataPath>ПараметрыИсточника.ИсточникЗначения</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ListChoiceMode>true</ListChoiceMode>
+													<TextEdit>false</TextEdit>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Значение</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Из входящих</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ПараметрыИсточникаИсточникЗначенияКонтекстноеМеню" id="90"/>
+													<ExtendedTooltip name="ПараметрыИсточникаИсточникЗначенияРасширеннаяПодсказка" id="91"/>
+													<Events>
+														<Event name="OnChange">ПараметрыИсточникаИсточникЗначенияПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ПараметрыИсточникаЗначение" id="92">
+													<DataPath>ПараметрыИсточника.Значение</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ПараметрыИсточникаЗначениеКонтекстноеМеню" id="93"/>
+													<ExtendedTooltip name="ПараметрыИсточникаЗначениеРасширеннаяПодсказка" id="94"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа3" id="126">
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<Button name="ДобавитьПолеИсточника" id="100">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ДобавитьПолеИсточника</CommandName>
+											<ExtendedTooltip name="ДобавитьПолеИсточникаРасширеннаяПодсказка" id="101"/>
+										</Button>
+										<Button name="ВставитьПерменную" id="102">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВставитьПерменную</CommandName>
+											<ExtendedTooltip name="ВставитьПерменнуюРасширеннаяПодсказка" id="103"/>
+										</Button>
+										<Button name="ВставитьВхоядщийПараметр" id="117">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВставитьВходящийПараметр</CommandName>
+											<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+											<ExtendedTooltip name="ВставитьВхоядщийПараметрРасширеннаяПодсказка" id="118"/>
+										</Button>
+										<Button name="ВставитьСсылку" id="124">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВставитьСсылку</CommandName>
+											<ExtendedTooltip name="ВставитьСсылкуРасширеннаяПодсказка" id="125"/>
+										</Button>
+										<Button name="Изображение" id="128">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Изображение</CommandName>
+											<ExtendedTooltip name="ИзображениеРасширеннаяПодсказка" id="129"/>
+										</Button>
+										<Button name="ВставитьФайл" id="130">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВставитьФайл</CommandName>
+											<ExtendedTooltip name="ВставитьФайлРасширеннаяПодсказка" id="131"/>
+										</Button>
+										<Button name="ВставитьОбщуюПеременную" id="132">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВставитьОбщуюПеременную</CommandName>
+											<ExtendedTooltip name="ВставитьОбщуюПеременнуюРасширеннаяПодсказка" id="133"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<TextDocumentField name="Текст" id="37">
+									<DataPath>Текст</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ContextMenu name="ТекстКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="ТекстРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="OnChange">ТекстПриИзменении</Event>
+									</Events>
+								</TextDocumentField>
+								<LabelDecoration name="ПодсказкаКод" id="95">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Доступные переменные: "ВыходнаяСтрока"  - результат для HTML-страницы;  "НомерСтроки" - очередность выборки;</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>uk</v8:lang>
+											<v8:content>Доступные переменные: "ВыходнаяСтрока"  - результат для HTML-страницы;  "НомерСтроки" - очередность выборки;</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаКодКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ПодсказкаКодРасширеннаяПодсказка" id="97"/>
+								</LabelDecoration>
+								<CommandBar name="Группа5" id="46">
+									<HorizontalLocation>Right</HorizontalLocation>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="47"/>
+									<ChildItems>
+										<Button name="СохранитьЭлементСостава" id="48">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.СохранитьЭлементСостава</CommandName>
+											<ExtendedTooltip name="СохранитьЭлементСоставаРасширеннаяПодсказка" id="49"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаВходящиеПараметры" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Входящие параметры</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Входящие параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа входящие параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаВходящиеПараметрыРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<Table name="ВходящиеПараметры" id="52">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Объект.ВходящиеПараметры</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ВходящиеПараметрыКонтекстноеМеню" id="53"/>
+							<AutoCommandBar name="ВходящиеПараметрыКоманднаяПанель" id="54"/>
+							<ExtendedTooltip name="ВходящиеПараметрыРасширеннаяПодсказка" id="55"/>
+							<SearchStringAddition name="ВходящиеПараметрыСтрокаПоиска" id="56">
+								<AdditionSource>
+									<Item>ВходящиеПараметры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВходящиеПараметрыСтрокаПоискаКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="ВходящиеПараметрыСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ВходящиеПараметрыСостояниеПросмотра" id="59">
+								<AdditionSource>
+									<Item>ВходящиеПараметры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ВходящиеПараметрыСостояниеПросмотраКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ВходящиеПараметрыСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ВходящиеПараметрыУправлениеПоиском" id="62">
+								<AdditionSource>
+									<Item>ВходящиеПараметры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ВходящиеПараметрыУправлениеПоискомКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ВходящиеПараметрыУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ВходящиеПараметрыНомерСтроки" id="65">
+									<DataPath>Объект.ВходящиеПараметры.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеПараметрыНомерСтрокиКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ВходящиеПараметрыНомерСтрокиРасширеннаяПодсказка" id="67"/>
+								</LabelField>
+								<InputField name="ВходящиеПараметрыИмяПараметра" id="68">
+									<DataPath>Объект.ВходящиеПараметры.ИмяПараметра</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеПараметрыИмяПараметраКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ВходящиеПараметрыИмяПараметраРасширеннаяПодсказка" id="70"/>
+								</InputField>
+								<InputField name="ВходящиеПараметрыЗначениеДляПроверки" id="121">
+									<DataPath>Объект.ВходящиеПараметры.ЗначениеДляПроверки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ВходящиеПараметрыЗначениеДляПроверкиКонтекстноеМеню" id="122"/>
+									<ExtendedTooltip name="ВходящиеПараметрыЗначениеДляПроверкиРасширеннаяПодсказка" id="123"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаРезультат" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>uk</v8:lang>
+							<v8:content>Результат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа результат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаРезультатРасширеннаяПодсказка" id="15"/>
+					<ChildItems>
+						<TextDocumentField name="ТекстМакета" id="7">
+							<DataPath>Объект.ШаблонМакета</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТекстМакетаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ТекстМакетаРасширеннаяПодсказка" id="9"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Web1C_Компоненты</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВидИсточникаДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид источника данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.Web1C_ВидыИсточниковДанных</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Текст" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИсточникДанных" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Источник данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НаименованиеЭлементаСостава" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование элемента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыИсточника" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Параметр" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметр</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсточникЗначения" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник значения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИДСтрокиСостава" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИДСтроки состава</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокПолейИсточника" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список полей источника</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьЭлементСостава" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить элемент состава</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьЭлементСостава</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДобавитьПолеИсточника" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить поле источника</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить поле источника</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПолеИсточника</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьПерменную" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить переменную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить перменную</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьПерменную</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СкопироватьСтрокуСостава" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать строку состава</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CloneObject</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СкопироватьСтрокуСостава</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьВходящийПараметр" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить входящий параметр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вставить входящий параметр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить вхоядщий параметр</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вставить входящий параметр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьВходящийПараметр</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПроверитьМакет" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить макет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить макет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьМакет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьСсылку" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить ссылку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить ссылку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьСсылку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьФайл" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Изображение" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить изображение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изображение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Изображение</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьОбщуюПеременную" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить общую переменную</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вставить общую переменную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить переменную</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вставить общую переменную</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьОбщуюПеременную</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

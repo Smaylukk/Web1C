@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<Subsystem uuid="c2ff761a-0bc4-43df-804c-0e70ae899d69">
+		<Properties>
+			<Name>Customization</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Кастомизация</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ВыборкаДанных</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.Web1C_ОбработчикиHTTPЗапросов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ВнутренниеПараметрыОтчетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.Web1C_ВидыСтраниц</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.Ресурсы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">HTTPService.Index</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.Web1C_ОбъектыАвторизации</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

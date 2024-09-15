@@ -1,0 +1,742 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.15">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГлавнаяГруппа" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главная группа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Главная группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГлавнаяГруппаРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<Pages name="ГруппаСтраницы" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<PagesRepresentation>TabsOnTop</PagesRepresentation>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="50"/>
+					<ChildItems>
+						<Page name="ВыгрузкаПоПлануОбмена" id="68">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка по плану обмена</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Вивантаження по плану обміну</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузка по плану обмена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ВыгрузкаПоПлануОбменаРасширеннаяПодсказка" id="69"/>
+							<ChildItems>
+								<InputField name="Узел" id="93">
+									<DataPath>Узел</DataPath>
+									<ContextMenu name="УзелКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="УзелРасширеннаяПодсказка" id="95"/>
+								</InputField>
+								<Table name="ОбъектыДляВыгрузкиПоПлануОбмена" id="72">
+									<Representation>List</Representation>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ОбъектыДляВыгрузки</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>CancelSearch</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>Find</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ОбъектыДляВыгрузкиПоПлануОбменаКонтекстноеМеню" id="73"/>
+									<AutoCommandBar name="ОбъектыДляВыгрузкиПоПлануОбменаКоманднаяПанель" id="74">
+										<ChildItems>
+											<Button name="ОбъектыДляВыгрузкиПоПлануОбменаЗаполнитьПоПлануОбмена" id="91">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПоПлануОбмена</CommandName>
+												<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаЗаполнитьПоПлануОбменаРасширеннаяПодсказка" id="92"/>
+											</Button>
+											<Button name="ОбъектыДляВыгрузкиПоПлануОбменаОчиститьИзменения" id="96">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОчиститьИзменения</CommandName>
+												<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаОчиститьИзмененияРасширеннаяПодсказка" id="97"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаРасширеннаяПодсказка" id="75"/>
+									<SearchStringAddition name="ОбъектыДляВыгрузкиПоПлануОбменаСтрокаПоиска" id="76">
+										<AdditionSource>
+											<Item>ОбъектыДляВыгрузкиПоПлануОбмена</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОбъектыДляВыгрузкиПоПлануОбменаСтрокаПоискаКонтекстноеМеню" id="77"/>
+										<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаСтрокаПоискаРасширеннаяПодсказка" id="78"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ОбъектыДляВыгрузкиПоПлануОбменаСостояниеПросмотра" id="79">
+										<AdditionSource>
+											<Item>ОбъектыДляВыгрузкиПоПлануОбмена</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ОбъектыДляВыгрузкиПоПлануОбменаСостояниеПросмотраКонтекстноеМеню" id="80"/>
+										<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаСостояниеПросмотраРасширеннаяПодсказка" id="81"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ОбъектыДляВыгрузкиПоПлануОбменаУправлениеПоиском" id="82">
+										<AdditionSource>
+											<Item>ОбъектыДляВыгрузкиПоПлануОбмена</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ОбъектыДляВыгрузкиПоПлануОбменаУправлениеПоискомКонтекстноеМеню" id="83"/>
+										<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаУправлениеПоискомРасширеннаяПодсказка" id="84"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="DragCheck">ОбъектыДляВыгрузкиПроверкаПеретаскивания</Event>
+										<Event name="Drag">ОбъектыДляВыгрузкиПеретаскивание</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ОбъектыДляВыгрузкиПоПлануОбменаНомерСтроки" id="85">
+											<DataPath>ОбъектыДляВыгрузки.НомерСтроки</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Номер строки</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>uk</v8:lang>
+													<v8:content>Номер строки</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыДляВыгрузкиПоПлануОбменаНомерСтрокиКонтекстноеМеню" id="86"/>
+											<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаНомерСтрокиРасширеннаяПодсказка" id="87"/>
+										</InputField>
+										<InputField name="ОбъектыДляВыгрузкиПоПлануОбменаОбъект" id="88">
+											<DataPath>ОбъектыДляВыгрузки.Объект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ОбъектыДляВыгрузкиПоПлануОбменаОбъектКонтекстноеМеню" id="89"/>
+											<ExtendedTooltip name="ОбъектыДляВыгрузкиПоПлануОбменаОбъектРасширеннаяПодсказка" id="90"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Button name="ФормаВыгрузитьПоПлануОбмена" id="70">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CommandName>Form.Command.Выгрузить</CommandName>
+									<ExtendedTooltip name="ФормаВыгрузитьПоПлануОбменаРасширеннаяПодсказка" id="71"/>
+								</Button>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаВыгрузка" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ручная выгрузка объектов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Ручне вивантаження об'єктів</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выгрузка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаВыгрузкаРасширеннаяПодсказка" id="52"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаВерх" id="3">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа верх</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа верх</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="4"/>
+									<ChildItems>
+										<CheckBoxField name="ВыгружатьВсеСвязанныеОбъекты" id="65">
+											<DataPath>ВыгружатьВсеСвязанныеОбъекты</DataPath>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ВыгружатьВсеСвязанныеОбъектыКонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ВыгружатьВсеСвязанныеОбъектыРасширеннаяПодсказка" id="67"/>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаНиз" id="5">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа низ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа низ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНизРасширеннаяПодсказка" id="6"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЛево" id="7">
+											<ReadOnly>true</ReadOnly>
+											<EnableContentChange>true</EnableContentChange>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа лево</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа лево</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="8"/>
+											<ChildItems>
+												<Table name="ДеревоОбъектов" id="11">
+													<Representation>Tree</Representation>
+													<TitleLocation>Top</TitleLocation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ДеревоОбъектов</DataPath>
+													<ContextMenu name="ДеревоОбъектовКонтекстноеМеню" id="12"/>
+													<AutoCommandBar name="ДеревоОбъектовКоманднаяПанель" id="13">
+														<Autofill>false</Autofill>
+														<ChildItems>
+															<Button name="ДеревоОбъектовСвернутьДерево" id="43">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.СвернутьДерево</CommandName>
+																<ExtendedTooltip name="ДеревоОбъектовСвернутьДеревоРасширеннаяПодсказка" id="44"/>
+															</Button>
+															<Button name="ДеревоОбъектовРазвернутьДерево" id="45">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.РазвернутьДерево</CommandName>
+																<ExtendedTooltip name="ДеревоОбъектовРазвернутьДеревоРасширеннаяПодсказка" id="46"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ДеревоОбъектовРасширеннаяПодсказка" id="14"/>
+													<SearchStringAddition name="ДеревоОбъектовСтрокаПоиска" id="15">
+														<AdditionSource>
+															<Item>ДеревоОбъектов</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДеревоОбъектовСтрокаПоискаКонтекстноеМеню" id="16"/>
+														<ExtendedTooltip name="ДеревоОбъектовСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ДеревоОбъектовСостояниеПросмотра" id="18">
+														<AdditionSource>
+															<Item>ДеревоОбъектов</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ДеревоОбъектовСостояниеПросмотраКонтекстноеМеню" id="19"/>
+														<ExtendedTooltip name="ДеревоОбъектовСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ДеревоОбъектовУправлениеПоиском" id="21">
+														<AdditionSource>
+															<Item>ДеревоОбъектов</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ДеревоОбъектовУправлениеПоискомКонтекстноеМеню" id="22"/>
+														<ExtendedTooltip name="ДеревоОбъектовУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="DragCheck">ДеревоОбъектовПроверкаПеретаскивания</Event>
+														<Event name="Selection">ДеревоОбъектовВыбор</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ДеревоОбъектовОбъект" id="24">
+															<DataPath>ДеревоОбъектов.Объект</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ДеревоОбъектовОбъектКонтекстноеМеню" id="25"/>
+															<ExtendedTooltip name="ДеревоОбъектовОбъектРасширеннаяПодсказка" id="26"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПраво" id="9">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа право</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа право</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="10"/>
+											<ChildItems>
+												<Table name="ОбъектыДляВыгрузки" id="27">
+													<Representation>List</Representation>
+													<TitleLocation>Top</TitleLocation>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ОбъектыДляВыгрузки</DataPath>
+													<CommandSet>
+														<ExcludedCommand>Add</ExcludedCommand>
+														<ExcludedCommand>CancelSearch</ExcludedCommand>
+														<ExcludedCommand>Change</ExcludedCommand>
+														<ExcludedCommand>Copy</ExcludedCommand>
+														<ExcludedCommand>Delete</ExcludedCommand>
+														<ExcludedCommand>EndEdit</ExcludedCommand>
+														<ExcludedCommand>Find</ExcludedCommand>
+														<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+													</CommandSet>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ОбъектыДляВыгрузкиКонтекстноеМеню" id="28"/>
+													<AutoCommandBar name="ОбъектыДляВыгрузкиКоманднаяПанель" id="29"/>
+													<ExtendedTooltip name="ОбъектыДляВыгрузкиРасширеннаяПодсказка" id="30"/>
+													<SearchStringAddition name="ОбъектыДляВыгрузкиСтрокаПоиска" id="31">
+														<AdditionSource>
+															<Item>ОбъектыДляВыгрузки</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ОбъектыДляВыгрузкиСтрокаПоискаКонтекстноеМеню" id="32"/>
+														<ExtendedTooltip name="ОбъектыДляВыгрузкиСтрокаПоискаРасширеннаяПодсказка" id="33"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ОбъектыДляВыгрузкиСостояниеПросмотра" id="34">
+														<AdditionSource>
+															<Item>ОбъектыДляВыгрузки</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ОбъектыДляВыгрузкиСостояниеПросмотраКонтекстноеМеню" id="35"/>
+														<ExtendedTooltip name="ОбъектыДляВыгрузкиСостояниеПросмотраРасширеннаяПодсказка" id="36"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ОбъектыДляВыгрузкиУправлениеПоиском" id="37">
+														<AdditionSource>
+															<Item>ОбъектыДляВыгрузки</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ОбъектыДляВыгрузкиУправлениеПоискомКонтекстноеМеню" id="38"/>
+														<ExtendedTooltip name="ОбъектыДляВыгрузкиУправлениеПоискомРасширеннаяПодсказка" id="39"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="DragCheck">ОбъектыДляВыгрузкиПроверкаПеретаскивания</Event>
+														<Event name="Drag">ОбъектыДляВыгрузкиПеретаскивание</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ОбъектыДляВыгрузкиНомерСтроки" id="62">
+															<DataPath>ОбъектыДляВыгрузки.НомерСтроки</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Номер строки</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>uk</v8:lang>
+																	<v8:content>Номер строки</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ОбъектыДляВыгрузкиНомерСтрокиКонтекстноеМеню" id="63"/>
+															<ExtendedTooltip name="ОбъектыДляВыгрузкиНомерСтрокиРасширеннаяПодсказка" id="64"/>
+														</InputField>
+														<InputField name="ОбъектыДляВыгрузкиОбъект" id="40">
+															<DataPath>ОбъектыДляВыгрузки.Объект</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ОбъектыДляВыгрузкиОбъектКонтекстноеМеню" id="41"/>
+															<ExtendedTooltip name="ОбъектыДляВыгрузкиОбъектРасширеннаяПодсказка" id="42"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ФормаВыгрузить" id="47">
+									<Type>UsualButton</Type>
+									<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+									<CommandName>Form.Command.Выгрузить</CommandName>
+									<ExtendedTooltip name="ФормаВыгрузитьРасширеннаяПодсказка" id="48"/>
+								</Button>
+							</ChildItems>
+						</Page>
+						<Page name="ГруппаЗагрузка" id="53">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Загрузка объектов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>uk</v8:lang>
+									<v8:content>Завантаження об'єктів</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа загрузка</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<UsualGroup name="Группа1" id="60">
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="61"/>
+									<ChildItems>
+										<InputField name="ФайлЗагрузки" id="55">
+											<DataPath>ФайлЗагрузки</DataPath>
+											<ChoiceButton>true</ChoiceButton>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="ФайлЗагрузкиКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ФайлЗагрузкиРасширеннаяПодсказка" id="57"/>
+											<Events>
+												<Event name="StartChoice">ФайлЗагрузкиНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<Button name="Загрузить" id="58">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.Загрузить</CommandName>
+											<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="59"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Web1C_ВыгрузкаЗагрузкаДанных</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДеревоОбъектов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево объектов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Дерево об'єктів</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Web1C_ОтчетыЛичногоКабинета</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_Ресурсы</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_Компоненты</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_ИсточникДанных</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_Страницы</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОбъектыДляВыгрузки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объекты для выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Об'єкти для вивантаження</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Web1C_ОтчетыЛичногоКабинета</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_Ресурсы</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_Компоненты</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_ИсточникДанных</v8:Type>
+						<v8:Type>cfg:CatalogRef.Web1C_Страницы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер строки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ФайлЗагрузки" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Файл загрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Файл завантаження</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыгружатьВсеСвязанныеОбъекты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать все связанные объекты</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантажувати всі пов'язані об'єкти</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Узел" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узел</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вузол</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:ExchangePlanRef.Web1C_Синхронизация</v8:Type>
+			</Type>
+			<Save>
+				<Field>Узел</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СвернутьДерево" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Згорнути дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СвернутьДерево</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РазвернутьДерево" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть дерево</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Розгорнути дерево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть дерево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExpandAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РазвернутьДерево</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выгрузить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Вивантажити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Загрузить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Завантажити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Загрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьПоПлануОбмена" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Заповнити</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по плану обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПлануОбмена</Action>
+		</Command>
+		<Command name="ОчиститьИзменения" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить изменения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>uk</v8:lang>
+					<v8:content>Очистити зміни</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОчиститьИзменения</Action>
+		</Command>
+	</Commands>
+</Form>
