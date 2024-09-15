@@ -1,4 +1,4 @@
-# Swagger from 1C
+# Web 1C
 
 ## Зміст:
 
